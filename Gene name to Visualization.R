@@ -101,7 +101,7 @@ get_and_download_structure <- function(gene_symbol, output_dir = ".") {
 
 # Replace "TP53" with any human gene symbol you're interested in
 # Specify an output directory (default is current directory)
-pdb_file <- get_and_download_structure("BRCA1", output_dir = "alphafold_structures")
+pdb_file <- get_and_download_structure("TP53", output_dir = "alphafold_structures")
 
 # If you want to view the structure (requires the bio3d package)
 if (!is.null(pdb_file) && requireNamespace("bio3d", quietly = TRUE)) {
