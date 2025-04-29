@@ -1,3 +1,5 @@
+# ---------- Real Data? ---------
+
 # ---------- Libraries ----------
 if(!require(dplyr)){install.packages("dplyr")}
 if(!require(dplyr)){install.packages("tidyverse")}
@@ -51,6 +53,11 @@ mut_df <- df[df$Mut == TRUE,]
     group_by(AminoAcid) %>%
     nest()
   grouped_by_AA
+  
+location_df <- df[,-3]
+grouped_by_AA <- df %>%
+  group_by(AminoAcid) %>%
+grouped_by_AA
 
 # Euclidean function {use: euclidean_distance[i, j] }
     euclidean_distance <- function(point1, point2) {
